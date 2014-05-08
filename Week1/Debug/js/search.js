@@ -1,5 +1,5 @@
 // Create privatized scope using a self-executing function
-function myFunction(){
+(function(){
 	
 	// Variable initialization (DO NOT FIX ANY OF THE BELOW VAR's)
 	var resultsDIV = document.getElementById("results"),
@@ -64,7 +64,7 @@ function myFunction(){
 		results.sort();
 
 		// Check that matches were found, and run output functions
-		if(results.length = 0){
+		if(results.length === 0){
 			noMatch();
 		}else{
 			showMatches(results);
@@ -102,9 +102,9 @@ function myFunction(){
 
 			// make the video link - THE NEXT LINE IS CORRECT.
 			html += '<p><a href=' + url + '>' + title + '</a></p>';
+
 		}
 		resultsDIV.innerHTML = html; //THIS LINE IS CORRECT.
-
 	};
 
 	// The onsubmit event will be reviewed in upcoming Course Material.
@@ -117,6 +117,4 @@ function myFunction(){
         // THE LINE DIRECTLY BELOW IS CORRECT
 		return false;
     }
-
-}
-myFunction();
+})();
