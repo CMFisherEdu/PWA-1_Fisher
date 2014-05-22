@@ -1,10 +1,10 @@
 /*
- * Fisher, Chase - 09 May 2014
+ * Fisher, Chase - 22 May 2014
  * Duel Fight Game - FINISHED
- * Date: 4/09/13
+ * Date: 4/22/13
 
- Assignment 1
- Part 1/3 of series
+ Assignment 3
+ Part 3/3 of series
 */
 
 // self-executing function
