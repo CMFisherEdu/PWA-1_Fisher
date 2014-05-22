@@ -71,7 +71,7 @@
                 document.getElementById("roundnumber").innerHTML = "Round: " + round;
                 document.getElementById("f1health").innerHTML = fighter1.Health;
                 document.getElementById("f2health").innerHTML = fighter2.Health;
-                result = fighter1[0] + " has won the fight!"; // provide result for health of fighter 2 below 1.
+                result = fighter1.Name + " has won the fight!"; // provide result for health of fighter 2 below 1.
                 document.getElementById("roundresult").innerHTML = (result); // give the result of the round -> fighter 2 dies.
                 stopListening();
             } else if(fighter1.Health < 1 && fighter2.Health > 1){
@@ -79,7 +79,7 @@
                 document.getElementById("roundnumber").innerHTML = "Round: " + round;
                 document.getElementById("f1health").innerHTML = fighter1.Health;
                 document.getElementById("f2health").innerHTML = fighter2.Health;
-                result = fighter2[0] + " has won the fight!"; // provide result for health of fighter1 below 1.
+                result = fighter2.Name + " has won the fight!"; // provide result for health of fighter1 below 1.
                 document.getElementById("roundresult").innerHTML = (result);  // give the result of the round -> fighter 1 dies.
                 stopListening();
             } else if(fighter1.Health > 1 && fighter2.Health > 1){
@@ -96,6 +96,6 @@
     }
     function stopListening(){
         // Prevent User from continuing game if it is declared done.
-        document.getElementById("buttonblue")//remove event listener? ;
+        this.stopPropagation();//remove event listener? ;
     }
     })();
