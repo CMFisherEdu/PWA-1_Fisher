@@ -59,39 +59,43 @@
             - in #4 allow user to keep clicking button.
              */
             if (fighter1.Health < 1 && fighter2.Health < 1){
-                round++;
-                document.getElementById("roundnumber").innerHTML = "Round: " + round;
-                document.getElementById("f1health").innerHTML = fighter1.Health;
-                document.getElementById("f2health").innerHTML = fighter2.Health;
-                result = "Both Fighters Die!";
-                document.getElementById("roundresult").innerHTML = (result);
-                // add in stop event listener
+                round++; //increment round
+                document.getElementById("roundnumber").innerHTML = "Round: " + round; // display round
+                document.getElementById("f1health").innerHTML = fighter1.Health; // display fighter 1 health.
+                document.getElementById("f2health").innerHTML = fighter2.Health; // display fighter 2 health.
+                result = "Both Fighters Die!"; // provide result for health of BOTH below 1.
+                document.getElementById("roundresult").innerHTML = (result); // give the result of the round -> both die.
+                stopListening();
             } else if(fighter1.Health > 1 && fighter2.Health < 1){
                 round++;
                 document.getElementById("roundnumber").innerHTML = "Round: " + round;
                 document.getElementById("f1health").innerHTML = fighter1.Health;
                 document.getElementById("f2health").innerHTML = fighter2.Health;
-                result = fighter1[0] + " has won the fight!";
-                document.getElementById("roundresult").innerHTML = (result);
-                // add in stop event listener
+                result = fighter1[0] + " has won the fight!"; // provide result for health of fighter 2 below 1.
+                document.getElementById("roundresult").innerHTML = (result); // give the result of the round -> fighter 2 dies.
+                stopListening();
             } else if(fighter1.Health < 1 && fighter2.Health > 1){
                 round++;
                 document.getElementById("roundnumber").innerHTML = "Round: " + round;
                 document.getElementById("f1health").innerHTML = fighter1.Health;
                 document.getElementById("f2health").innerHTML = fighter2.Health;
-                result = fighter2[0] + " has won the fight!";
-                document.getElementById("roundresult").innerHTML = (result);
-                // add in stop event listener
+                result = fighter2[0] + " has won the fight!"; // provide result for health of fighter1 below 1.
+                document.getElementById("roundresult").innerHTML = (result);  // give the result of the round -> fighter 1 dies.
+                stopListening();
             } else if(fighter1.Health > 1 && fighter2.Health > 1){
                 round++;
                 document.getElementById("roundnumber").innerHTML = "Round: " + round;
                 document.getElementById("f1health").innerHTML = fighter1.Health;
                 document.getElementById("f2health").innerHTML = fighter2.Health;
-                result = "The fight goes on...";
-                document.getElementById("roundresult").innerHTML = (result);
+                result = "The fight goes on..."; // provide result for health of BOTH above 1.
+                document.getElementById("roundresult").innerHTML = (result);  // give the result of the round -> both live.
                 // do not add stop event listener
             }
             return result;
         }
+    }
+    function stopListening(){
+        // Prevent User from continuing game if it is declared done.
+        document.getElementById("buttonblue")//remove event listener? ;
     }
     })();
