@@ -15,17 +15,22 @@
     //player name, damage, health | object literal: Key [know-type]: value.
     var fighter1 = {Name:"Kabal", Damage:20, Health:100};
     var fighter2 = {Name:"Kratos", Damage:20, Health:100};
-    //initiate round
-    var round=0;
-    document.getElementById("roundnumber").innerHTML = "Round: " + round;
-    console.log(round);
+    var round=0;     //initiate round
+    document.getElementById("roundnumber").innerHTML = "Round: " + round; // display round number at top.
+    console.log(round); //console the round number to be sure.
 
-    document.getElementById("buttonblue").onclick = function(e){
-        console.log(e);
-        fight();
-        e.preventDefault();
+    document.getElementById("buttonblue").onclick = function (e){ //make an onclick event
+        console.log(e); //debugging purposes to see mouse data
+        fight(); // after "click" - let's run the fight function
+        e.preventDefault(); // no links here!
         return false;
     };
+
+    function stopListening(){
+        // Prevent User from continuing game if it is declared done.
+        document.getElementById("buttonblue").onclick = null;
+        //remove event listener-  by "nulling" the onclick itself
+    }
     function fight(){
         //establish damage amount for variable min/max - math.floor
         var minDamage1 = fighter1.Damage * .5;
@@ -93,9 +98,5 @@
             }
             return result;
         }
-    }
-    function stopListening(){
-        // Prevent User from continuing game if it is declared done.
-        this.stopPropagation();//remove event listener? ;
     }
     })();

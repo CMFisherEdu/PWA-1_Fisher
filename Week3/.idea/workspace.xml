@@ -26,7 +26,7 @@
       <file leaf-file-name="main.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="84" column="39" selection-start="4228" selection-end="4228" vertical-scroll-proportion="0.5435685" vertical-offset="867" max-vertical-offset="1590">
+            <state line="19" column="62" selection-start="629" selection-end="629" vertical-scroll-proportion="-0.41493776" vertical-offset="585" max-vertical-offset="1605">
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -123,6 +123,7 @@
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="FullScreen" value="false" />
   </component>
   <component name="RunManager">
     <list size="0" />
@@ -178,7 +179,7 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="84" column="39" selection-start="4228" selection-end="4228" vertical-scroll-proportion="0.5435685" vertical-offset="867" max-vertical-offset="1590">
+        <state line="19" column="62" selection-start="629" selection-end="629" vertical-scroll-proportion="-0.41493776" vertical-offset="585" max-vertical-offset="1605">
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
